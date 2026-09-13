@@ -31,44 +31,27 @@ void setup_io() {
 }
 
 void solve() {
-    int n; cin>>n;
- 
-    vi v(n);
-    for(int &i : v) cin >> i;
- 
-    int end = v.size()-1, front = 0;
- 
-    vi v2;
-    for(int i=0; i<v.size(); i++){
+    string s;
+    cin >> s;
 
-        v2.push_back( abs(v[i]) );
+    string ans;
 
-        if( v[front] == v[end] && v[front] !=0 ){
+    for (int i = 0; i < (int)s.size(); i++) {
+        ans += s[i];
 
-            for(int j=front+1; j<= end; j++){
-
-                if( j == end) v2.push_back( abs(v[i]) );
-                
-                else v2.push_back(0);
-            }
-            break;
-        }
-        else{
-            if( front == 0 || front != end ) front++;
-            if( end == 0 ) end--;
-        }
+        if (i != (int)s.size() - 1)
+            ans += 'o';
     }
-    for(auto &it: v2){
-        cout << it << " ";
-    }
-    cout<<"\n";
+
+    cout << ans << '\n';
 }
+
 
 int main() {
     setup_io();
 
     int t = 1;
-    cin >> t;
+    // cin >> t;
     
     while (t--) {
         solve();
