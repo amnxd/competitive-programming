@@ -7,10 +7,10 @@ int main() {
     std::cin >> t;
 
     while(t--) {
-        int n; 
+        int n;
         std::cin >> n;
 
         
-
+        
     }
 }
