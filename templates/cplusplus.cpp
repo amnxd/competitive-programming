@@ -40,13 +40,12 @@ void dfs(int u, int par);
 
 const int mod = 1'000'000'007; // update MOD accordingl\y
 const int N = 3e5, M = N;
-//=======================
 
 vi g[N];
 int a[N];
 
 void solve() {
-    
+    $0
 }
 
 int main() {

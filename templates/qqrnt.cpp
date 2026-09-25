@@ -1,5 +1,5 @@
-#pragma GCC optimize ("O3")
 #include <bits/stdc++.h>
+#pragma GCC optimize ("O3")
 
 int main() {
     std::cin.tie(0)->sync_with_stdio(0);
@@ -10,7 +10,7 @@ int main() {
         int n; 
         std::cin >> n;
 
-        
+        $0
 
     }
 }

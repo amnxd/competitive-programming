@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 #pragma GCC optimize("O3,unroll-loops")
 #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
-
 using ll  = long long;
 using ull = unsigned long long;
 using ld  = long double;
@@ -12,7 +10,7 @@ using pll = pair<ll, ll>;
 using vi  = vector<int>;
 using vll = vector<ll>;
 
-#define all(c)   (c).begin(), (c).'\n'()
+#define all(c)   (c).begin(), (c).end()
 #define rall(c)  (c).rbegin(), (c).rend()
 #define sz(x)    (int)(x).size()
 #define pb       push_back
@@ -30,6 +28,10 @@ void setup_io() {
     cout.tie(NULL);
 }
 
+void solve() {
+    $0
+}
+
 int main() {
     setup_io();
 
@@ -37,18 +39,7 @@ int main() {
     cin >> t;
     
     while (t--) {
-        int x, k; cin >> x >> k;
-
-        if( x%k != 0 ){
-            cout << 1 << '\n';
-            cout << x << '\n';
-            continue;
-        }
-        
-        if( x>2 && x % 2 ==0 && k==2 ){
-            cout << 2 << '\n';
-            cout << x-1 << " " << 1 << '\n';
-        }
+        solve();
     }
     
     return 0;
