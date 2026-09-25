@@ -41,7 +41,7 @@ int main() {
     while (t--) {
         int n, k, x; cin >> n >> k >> x;
 
-        if( n>=1 && k>=n && x!=k ){
+        if( n>=1 && k>=n && x!=n ){
             cout << "YES\n";
             cout << 1 << '\n';
             cout << n << " ";
@@ -69,11 +69,12 @@ int main() {
             continue;
         }
 
-        if( n%3==0 && k>=3 && x!=3 ){
+        if( n>=3 && n%2==1 && k>=3 && x==1 ){
             cout << "YES\n";
-            cout << n/3 << '\n';
-            for(int i=0; i<n/3; i++){
-                cout << 3 << " ";
+            cout << 1 + (n-3)/2 << '\n';
+            cout << 3 << " ";
+            for(int i=0; i<(n-3)/2; i++){
+                cout << 2 << " ";
             }
             cout << '\n';
             continue;
