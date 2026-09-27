@@ -9,19 +9,15 @@ using pii = pair<int, int>;
 using pll = pair<ll, ll>;
 using vi  = vector<int>;
 using vll = vector<ll>;
-
 #define all(c)   (c).begin(), (c).end()
 #define rall(c)  (c).rbegin(), (c).rend()
 #define sz(x)    (int)(x).size()
 #define pb       push_back
-#define mp       make_pair
 #define F        first
 #define S        second
-
 const int MOD = 1e9 + 7; // 998244353
 const int INF = 1e9 + 7;
 const ll LLINF = 1e18 + 7;
-
 void setup_io() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -29,7 +25,7 @@ void setup_io() {
 }
 
 void solve() {
-    $0
+    
 }
 
 int main() {
