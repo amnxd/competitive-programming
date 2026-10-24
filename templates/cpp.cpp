@@ -25,7 +25,7 @@ void setup_io() {
 }
 
 void solve() {
-    
+    $0
 }
 
 int main() {
