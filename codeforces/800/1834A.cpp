@@ -24,36 +24,31 @@ void setup_io() {
 }
 
 void solve() {
-    int n; cin >> n;
-    vi v(n);
+    int sz; cin >> sz;
+    vi v(sz);
     unordered_map<int, int> mp;
     
+    int ans = 0;
+
     for(int &i: v){
         cin >> i;
         mp[i]++;
     }
+    
+    int p = mp[1], n = mp[-1];
 
-    if( n<4 ){
-        cout << mp[-1] << '\n';
+    if( p >= n && p%2 == 0 ){
+        cout << 0 << '\n'; 
     }
     else{
-        if( mp[1] >= mp[-1] && mp[-1]%2 == 0 ){
-            cout << 0 << '\n';
+        while( p < n ){
+            p += 2;
+            n -= 2;
+            ans++;
         }
-        else if( mp[1] == 0 ){
-            if( n%2 == 0 ) cout << 2 << '\n';
-            else cout << 3 << '\n';
-        }
-        else{
-            if( mp[-1]%2 == 0){
-                cout << 2 << '\n';
-            }
-            else{
-                cout << 1 << '\n';
-            }
-        }
+        cout << ans << '\n';
     }
-    
+
 }
 
 int main() {
