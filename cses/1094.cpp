@@ -1,8 +1,7 @@
+#pragma GCC optimize("O3,unroll-loops")
 #include <bits/stdc++.h>
 using namespace std;
 
-#pragma GCC optimize("O3,unroll-loops")
-#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 
 using ll  = long long;
 using ull = unsigned long long;
@@ -36,10 +35,15 @@ void solve() {
 
     for(ll &i:v) cin >> i;
 
-    int moves = 0, ptr = 0;
-    for(int i=0; i<v.size(); i++){
-        if(v[ptr] > v[i]) moves += (v[ptr] - v[i]);
-        if(i>0) ptr++;
+    long long moves = 0, ptr = 0;
+
+    for(int i=1; i<n; i++){
+        if(v[i] < v[ptr]){
+            long long diff = v[ptr] - v[i];
+            v[i] += diff;
+            moves += diff; 
+        }
+        ptr++;
     }
     cout << moves;
 }
